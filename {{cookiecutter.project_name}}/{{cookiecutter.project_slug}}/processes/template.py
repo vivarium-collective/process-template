@@ -41,7 +41,7 @@ def run_process(core, config):
         'mass': 1.0,
         'process': {
             '_type': 'process',
-            'address': 'local:!{{cookiecutter.project_slug}}.processes.ProcessTemplate',
+            'address': 'local:!{{cookiecutter.project_slug}}.processes.template.ProcessTemplate',
             'config': config,
             'inputs': {'mass': ['mass']},
             'outputs': {'mass': ['mass']},
@@ -57,10 +57,10 @@ def run_process(core, config):
     duration = 10.0
     composite.run(duration)
 
-    results = gather_emitter_results(composite)
+    results = gather_emitter_results(composite)[('emitter',)]
 
     assert results[-1]['time'] == duration
-    assert len(results) == 101 # ?
+    assert len(results) == 11 # ?
 
     print(results) # !
 

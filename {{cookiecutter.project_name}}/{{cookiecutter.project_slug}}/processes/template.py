@@ -69,7 +69,7 @@ if __name__ == '__main__':
     core = ProcessTypes()
     core.register_process(
         'template',
-        TemplateProcess)
+        ProcessTemplate)
 
     config = {
         'rate': 0.1}

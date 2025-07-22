@@ -1,5 +1,5 @@
 {
-  "project_name": "Vivarium process-bigraph project",
-  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+  "project_name": "process-template",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
   "author": "Anonymous"
 }

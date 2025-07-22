@@ -41,7 +41,7 @@ def run_process(core, config):
         'mass': 1.0,
         'process': {
             '_type': 'process',
-            'address': 'local:!{{cookie_cutter.project_slug}}.processes.ProcessTemplate',
+            'address': 'local:!{{cookiecutter.project_slug}}.processes.ProcessTemplate',
             'config': config,
             'inputs': {'mass': ['mass']},
             'outputs': {'mass': ['mass']},
